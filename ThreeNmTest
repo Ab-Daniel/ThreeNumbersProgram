@@ -1,0 +1,34 @@
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.Scanner;
+
+public class ThreeNumTest
+{
+	public static void main(String[ ] args) throws FileNotFoundException
+	{
+		FileReader reader = new FileReader("Numbers.dat");
+		file = new Scanner(reader);
+		for(int run = 0; run < 3; run++)					//loop
+		{
+		System.out.print("Set of inputs: ");
+		double dI1 = file.nextDouble();
+		double dI2 = file.nextDouble();
+		double dI3 = file.nextDouble();
+		System.out.print(dI1 + " ");
+		System.out.print(dI2 + " ");
+		System.out.println(dI3);
+		
+		ThreeNum three = new ThreeNum(dI1, dI2, dI3);
+		
+		System.out.print("Sorted inputs: ");					//print the min, mid, and max
+		three.getMin();
+		System.out.print(" ");
+		three.getMid();
+		System.out.print(" ");
+		three.getMax();
+		System.out.println("");
+		System.out.println("");
+		}
+	}
+	private static Scanner file;
+}
