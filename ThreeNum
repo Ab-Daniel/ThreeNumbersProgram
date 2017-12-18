@@ -1,0 +1,45 @@
+public class ThreeNum
+{
+	public ThreeNum(double dI1, double dI2, double dI3) 				//constructor
+	{
+		d1 = dI1;
+		d2 = dI2;
+		d3 = dI3;
+	}
+	public void getMin()								//get the min
+	{
+		if(d1 < d2 && d1 < d3)
+			System.out.print(d1);
+		if(d2 < d3 && d2 < d1)
+			System.out.print(d2);
+		if(d3 < d2 && d3 < d1)
+			System.out.print(d3);
+	}
+	public void getMid()								//get the mid
+	{
+		if(d1 < d2 && d1 > d3)
+			System.out.print(d1);
+		if(d1 < d3 && d1 > d2)
+			System.out.print(d1);
+		if(d2 < d1 && d2 > d3)
+			System.out.print(d2);
+		if(d2 < d3 && d2 > d1)
+			System.out.print(d2);
+		if(d3 < d1 && d3 > d2)
+			System.out.print(d3);
+		if(d3 < d2 && d3 > d1)
+			System.out.print(d3);
+	}
+	public void getMax()								//get the max
+	{
+		if(d1 > d2 && d1 > d3)
+			System.out.print(d1);
+		if(d2 > d3 && d2 > d1)
+			System.out.print(d2);
+		if(d3 > d2 && d3 > d1)
+			System.out.print(d3);
+	}
+	private double d1;					//instance fields
+	private double d2;
+	private double d3;
+}
